@@ -1,0 +1,15 @@
+// import standards
+//-----------------------------------------------------------------------------------
+@import "standards/reset";
+@import "standards/mixins";
+@import "standards/variables";
+
+// import components
+//-----------------------------------------------------------------------------------
+@import "components/elements";
+@import "components/footer";
+@import "components/header";
+
+// import pages
+//-----------------------------------------------------------------------------------
+@import "pages/index";

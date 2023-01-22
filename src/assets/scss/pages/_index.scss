@@ -1,0 +1,22 @@
+body {
+  font-family: "Poppins-Regular", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  div {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    background-color: #b68787;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px auto;
+  }
+  .d-grid {
+    display: grid;
+  }
+
+}
