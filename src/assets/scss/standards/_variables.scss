@@ -4,6 +4,4 @@
 $default-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
 @include font-face("Poppins-Regular", "../fonts/Poppins-Regular/Poppins-Regular", "Poppins-Regular", normal);
-@include font-face("Poppins-Medium", "../fonts/Poppins-Medium/Poppins-Medium", "Poppins-Medium", normal);
-@include font-face("Poppins-SemiBold", "../fonts/Poppins-SemiBold/Poppins-SemiBold", "Poppins-SemiBold", normal);
-@include font-face("Poppins-Medium", "../fonts/Poppins-Bold/Poppins-Bold", "Poppins-Bold", normal);
+$PR : "Poppins-Regular", sans-serif;

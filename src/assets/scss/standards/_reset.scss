@@ -51,9 +51,13 @@ a {
   outline: none;
 }
 
-a, button, input[type="submit"], input[type="checkbox"], input[type="radio"] {
+a, button, input[type="submit"], input[type="checkbox"], input[type="radio"], select {
   cursor: pointer;
   transition: all .3s linear;
+}
+
+path {
+  transition: fill 0.4s ease;
 }
 
 
