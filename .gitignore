@@ -1,5 +1,7 @@
 /**/node_modules/
 /.git/
+/**/.idea
+/**/dest
 /**/Thumbs.db
 /**/*.DS_Store
 /**/package-lock.json
