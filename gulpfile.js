@@ -145,21 +145,21 @@ function js() {
 }
 
 function jsLibs() {
-    return src([ // Берём файлы из источников
+    return src([
         'src/assets/js/libs/*.js',
-        '!src/assets/js/libs/*.min.js', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+        '!src/assets/js/libs/*.min.js',
     ])
-        .pipe(concat('libs.js')) // Конкатенируем в один файл
-        .pipe(uglify()) // Сжимаем JavaScript
-        .pipe(dest(path.build.js))// Выгружаем готовый файл в папку назначения
-        .pipe(browserSync.reload({stream: true})); // Триггерим Browsersync для обновления страницы
+        .pipe(concat('libs.js'))
+        .pipe(uglify())
+        .pipe(dest(path.build.js))
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function images() {
     return src(path.src.images, {base: srcPath + "assets/img/"})
         .pipe(imagemin([
             imagemin.gifsicle({interlaced: true}),
-            imagemin.mozjpeg({quality: 75, progressive: true}),
+            //imagemin.mozjpeg({quality: 75, progressive: true}),
             imagemin.optipng({optimizationLevel: 5}),
             imagemin.svgo({
                 plugins: [
@@ -200,7 +200,6 @@ function watchFiles() {
 
 const build = gulp.series(clean, gulp.parallel(html, cssLibs, css, jsLibs, js, images, webpImages, fonts))
 const watch = gulp.parallel(build, watchFiles, serve)
-
 
 exports.html = html
 exports.csslibs = cssLibs
