@@ -109,17 +109,17 @@ function css() {
 
 //Library
 function cssLibs() {
-    return src([ // Берём файлы из источников
+    return src([
         'src/assets/css/libs/**/*.css',
-        '!src/assets/css/libs/**/*.min.css', // Пользовательские скрипты, использующие библиотеку, должны быть подключены в конце
+        'src/assets/css/libs/**/*.min.css',
     ])
-        .pipe(concat('libs.css')) // Конкатенируем в один файл
+        .pipe(concat('libs.css'))
         .pipe(rename({
             suffix: ".min",
             extname: ".css"
         }))
-        .pipe(dest(path.build.cssLibs))// Выгружаем готовый файл в папку назначения
-        .pipe(browserSync.reload({stream: true})); // Триггерим Browsersync для обновления страницы
+        .pipe(dest(path.build.cssLibs))
+        .pipe(browserSync.reload({stream: true}));
 }
 
 function js() {
@@ -146,13 +146,17 @@ function js() {
 
 function jsLibs() {
     return src([
-        'src/assets/js/libs/*.js',
-        '!src/assets/js/libs/*.min.js',
+        'src/assets/js/libs/**/*.js',
+        'src/assets/js/libs/**/*.min.js',
     ])
         .pipe(concat('libs.js'))
+        .pipe(rename({
+            suffix: ".min",
+            extname: ".js"
+        }))
         .pipe(uglify())
-        .pipe(dest(path.build.js))
-        .pipe(browserSync.reload({stream: true}));
+        .pipe(dest(path.build.jsLibs))
+        .pipe(browserSync.reload({stream: true}))
 }
 
 function images() {
@@ -192,8 +196,8 @@ function watchFiles() {
     gulp.watch([path.watch.html], html)
     gulp.watch([path.watch.cssLibs], cssLibs)
     gulp.watch([path.watch.css], css)
-    gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.jsLibs], jsLibs)
+    gulp.watch([path.watch.js], js)
     gulp.watch([path.watch.images], images)
     gulp.watch([path.watch.fonts], fonts)
 }
