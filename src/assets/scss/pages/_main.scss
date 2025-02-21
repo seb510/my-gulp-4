@@ -1,0 +1,11 @@
+@use "../standards/variables" as vars;
+
+.main {
+  font-family: vars.$PR;
+}
+
+body {
+  font-size: 1rem;
+  font-family: vars.$PR;
+  font-weight: 400;
+}

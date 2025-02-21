@@ -1,15 +1,8 @@
-// import standards
-//-----------------------------------------------------------------------------------
-@import "standards/reset";
-@import "standards/mixins";
-@import "standards/variables";
+// Підключаємо стандарти
+@use "standards/index" as standards;
 
-// import components
-//-----------------------------------------------------------------------------------
-@import "components/elements";
-@import "components/footer";
-@import "components/header";
+// Підключаємо компоненти
+@use "components/index" as components;
 
-// import pages
-//-----------------------------------------------------------------------------------
-@import "pages/index";
+// Підключаємо сторінки
+@use "pages/index" as pages;

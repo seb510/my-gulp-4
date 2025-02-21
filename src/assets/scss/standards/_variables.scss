@@ -1,7 +1,14 @@
+@use "mixins" as mixins;
 
 // font var
 //-----------------------------------------------------------------------------------
 $default-font: Arial, "Helvetica Neue", Helvetica, sans-serif;
 
-@include font-face("Poppins-Regular", "../fonts/Poppins-Regular/Poppins-Regular", "Poppins-Regular", normal);
+@include mixins.font-face("Poppins-Regular", "~@fonts/Poppins-Regular/Poppins-Regular", "Poppins-Regular", normal);
+@include mixins.font-face("Poppins-Medium", "~@fonts/Poppins-Medium/Poppins-Medium", 500, normal);
+@include mixins.font-face("Poppins-SemiBold", "~@fonts/Poppins-SemiBold/Poppins-SemiBold", 600, normal);
+@include mixins.font-face("Poppins-Bold", "~@fonts/Poppins-Bold/Poppins-Bold", 700, normal);
 $PR : "Poppins-Regular", sans-serif;
+$PM : "Poppins-Medium", sans-serif;
+$PSB : "Poppins-SemiBold", sans-serif;
+$PB : "Poppins-Bold", sans-serif;
