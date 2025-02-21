@@ -37,7 +37,7 @@ const path = {
         cssLibs: `${srcPath}${assetsPath}css/libs/*.css`,
         js: `${srcPath}${assetsPath}js/*.js`,
         jsLibs: `${srcPath}${assetsPath}js/libs/*.js`,
-        images: `${srcPath}${assetsPath}img/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
+        images: `${srcPath}${assetsPath}images/**/*.{jpg,png,svg,gif,ico,webp,webmanifest,xml,json}`,
         fonts: `${srcPath}${assetsPath}fonts/**/*.{eot,woff,woff2,ttf,svg}`
     },
     watch: {
@@ -77,7 +77,7 @@ function css() {
     return src(path.src.css)
         .pipe(plumber({ errorHandler: notify.onError("SCSS Error: <%= error.message %>") }))
         .pipe(sass())
-        .pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true }))
+        //.pipe(autoprefixer({ overrideBrowserslist: ["last 10 versions"], grid: true }))
         .pipe(cssbeautify())
         .pipe(dest(path.build.css))
         .pipe(cssnano({ zindex: false, discardComments: { removeAll: true } }))
