@@ -1,0 +1,170 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ol,
+ul,
+li,
+button {
+    margin: 0;
+    padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    overflow-x: hidden;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+
+a, button, input[type=submit], input[type=checkbox], input[type=radio], select {
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+path {
+  -webkit-transition: fill 0.4s ease;
+  transition: fill 0.4s ease;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  resize: none;
+}
+
+button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+input,
+textarea,
+select {
+  outline: none;
+  border: none;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    -webkit-transition-duration: 0.01ms !important;
+            transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Poppins-Regular";
+  src: url("~@fonts/Poppins-Regular/Poppins-Regular.eot");
+  src: url("~@fonts/Poppins-Regular/Poppins-Regular.eot?#iefix") format("embedded-opentype"), url("~@fonts/Poppins-Regular/Poppins-Regular.woff2") format("woff2"), url("~@fonts/Poppins-Regular/Poppins-Regular.woff") format("woff"), url("~@fonts/Poppins-Regular/Poppins-Regular.ttf") format("truetype");
+  font-weight: "Poppins-Regular";
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins-Medium";
+  src: url("~@fonts/Poppins-Medium/Poppins-Medium.eot");
+  src: url("~@fonts/Poppins-Medium/Poppins-Medium.eot?#iefix") format("embedded-opentype"), url("~@fonts/Poppins-Medium/Poppins-Medium.woff2") format("woff2"), url("~@fonts/Poppins-Medium/Poppins-Medium.woff") format("woff"), url("~@fonts/Poppins-Medium/Poppins-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins-SemiBold";
+  src: url("~@fonts/Poppins-SemiBold/Poppins-SemiBold.eot");
+  src: url("~@fonts/Poppins-SemiBold/Poppins-SemiBold.eot?#iefix") format("embedded-opentype"), url("~@fonts/Poppins-SemiBold/Poppins-SemiBold.woff2") format("woff2"), url("~@fonts/Poppins-SemiBold/Poppins-SemiBold.woff") format("woff"), url("~@fonts/Poppins-SemiBold/Poppins-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Poppins-Bold";
+  src: url("~@fonts/Poppins-Bold/Poppins-Bold.eot");
+  src: url("~@fonts/Poppins-Bold/Poppins-Bold.eot?#iefix") format("embedded-opentype"), url("~@fonts/Poppins-Bold/Poppins-Bold.woff2") format("woff2"), url("~@fonts/Poppins-Bold/Poppins-Bold.woff") format("woff"), url("~@fonts/Poppins-Bold/Poppins-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.hidden {
+  overflow: hidden;
+}
+
+.main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.wrapper {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  font-family: "Poppins-Regular", sans-serif;
+}
+
+body {
+  font-size: 1rem;
+  font-family: "Poppins-Regular", sans-serif;
+  font-weight: 400;
+}
